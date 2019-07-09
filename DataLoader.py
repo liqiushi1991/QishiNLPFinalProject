@@ -85,6 +85,7 @@ def collate_fn(data):
 
 
 def get_loader(data_type):
+    print('loading %s data' % data_type)
     if data_type not in ('train', 'test', 'validate'):
         raise ValueError("data_type has to be 'train', 'test' or 'validate'.")
 
