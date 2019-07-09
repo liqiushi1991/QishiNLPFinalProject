@@ -4,18 +4,21 @@ import torchvision.models as models
 """ Config various (hyper)parameters. """
 # Model architecture
 config = {
-    'image_net': models.vgg19,
+    # General
+    'image_net': models.resnet101,
 
     # Optimizer
     'log_step': 10,
-    'save_step': 10,
     'num_epochs': 5,
     'decoder_hidden_size': 512,
     'batch_size': 32,
-    'learning_rate': 1e-3,
     'clip_gradients': 5.0,
     'alpha_c': 1,
-    'crop_size': 224,
+    'crop_size': 256,
+    'epochs_since_improvement': 0,
+    'encoder_lr': 1e-4,
+    'decoder_lr': 4e-4,
+    'checkpoint': None,
 
     # Data set locations
     'train_caption_path': 'data/annotations/captions_val2017.json',
