@@ -155,7 +155,7 @@ def train():
                 print(
                     'Top 1 Accuracy {top1.val:.3f} ({top1.avg:.3f}), Top 5 Accuracy {top5.val:.3f} ({top5.avg:.3f})'.format(
                         top1=top1, top5=top5))
-                print('Validate score {.3f}'.format(valid_score))
+                print('Validate score %.3f'%(valid_score))
 
 
 def validate(data_loader_valid, encoder, decoder, criterion, vocab):
